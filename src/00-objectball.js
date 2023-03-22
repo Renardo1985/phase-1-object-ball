@@ -102,8 +102,34 @@ function teamColors(tname)
     }
 
 }
+function playerNumbers(tname)
+{
+  const arry = [];
+  let c = 0;
+  let object1 = gameObject();
+  debugger
+    for (let key1 in object1)
+    {
+        let teamsObj = object1[key1];
+        for (let key2 in teamsObj)
+        {
+            debugger
+          if (teamsObj.teamName == tname)
+          {
+            let playData = teamsObj.players;
+            for (let key3 in playData)
+            {
+               arry[c]= playData[key3].number;  
+               c++;  
+               debugger     
+               
+            }
+          } 
+        }
+    }
+    debugger
+  return arry;
+}
 
-
-console.log (teamColors("Charlotte Hornets"));
-
+console.log (playerNumbers("Charlotte Hornets"));
 
